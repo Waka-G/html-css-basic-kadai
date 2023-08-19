@@ -1,0 +1,115 @@
+/* div要素（id名「top」）に対する装飾 */
+#top{
+
+    /* 横幅を800px,背景色を「 #dcc9f4」,中にあるp要素が中央揃え */
+    width: 800px;
+    background-color: #dcc9f4;
+    
+    /* 上下に20pxの余白(マージ) 左右はautoで中央揃えにする */
+    margin: 20px auto;
+    /* p要素(テキスト)が中央揃えになるようにする */
+    text-align: center;
+    
+}
+
+/* div内のクラスtop-childの修飾(p要素を指定しておく) */
+.top-child p{
+    /* p要素を横並び */
+    display: inline-block;
+
+
+    /* 横幅を親要素の20%, 背景色を「#ffd9df」,3つのp要素が横並び*/
+    width: 20%;
+    background-color: #ffd9df;
+    /* ３つのp要素を横並びにする */
+    
+    /* p要素を親要素から中央揃えにする */
+    margin-left: auto;
+    margin-right: auto;
+    
+  
+}
+
+/* Step4-1. 真ん中の図形を作成 */
+/* div要素（id名「middle」）に対する装飾 */
+#middle{
+    /* 横幅を800px, 高さを800px,上下に20pxの余白を入れて、画面の中央に配置*/
+    width: 800px;
+    height: 800px;
+    margin: 20px auto;
+    background-color: #ffd9df;
+
+    /* 親要素に基準にしたい親要素にposition: relative;を指定しておく必要がある
+    （初期値のstaticのままだとNG） */
+    position: relative;
+    
+
+}
+/* div要素（id名「middle-child01」「middle-child02」「middle-child03」）に対する共通の装飾 */
+/* 横幅を200px,高さを200px,背景色を「#87ceeb」 */
+#middle-child01{
+    width: 200px;
+    height: 200px;
+    background-color: #87ceeb;
+
+    margin: auto;
+    
+
+    /*本来の位置から、上から100px、左から100px距離 */
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+#middle-child02{
+    width: 200px;
+    height: 200px;
+    background-color: #87ceeb;
+
+    /* 上から300px、左から300px距離 */
+    position: absolute;
+    top: 300px;
+    left: 300px;
+}
+#middle-child03{
+    width: 200px;
+    height: 200px;
+    background-color: #87ceeb;
+
+    /* 上から500px、左から500px距離 */
+    position: absolute;
+    top: 500px;
+    left: 500px;
+}
+
+/* Step5-1. 一番下の図形を作成 */
+#bottom{
+    /* 横幅を800px,高さを300px,画面の中央に配置,背景色を「#87ceeb」 */
+    width: 800px;
+    height: 300px;
+    margin: auto;
+    background-color: #87ceeb;
+}
+/* div要素（id名「bottom-child01」「bottom-child02」「bottom-child03」）に対する共通の装飾 */
+/* 横幅を400px,高さを100px,背景色を「#e5dcf0」 */
+#bottom-child01{
+    width: 400px;
+    height: 100px;
+    background-color: #e5dcf0;
+}
+#bottom-child02{
+    width: 400px;
+    height: 100px;
+    background-color: #e5dcf0;
+    /* 本来の位置から相対位置 */
+    position: relative;
+    left: 200px;
+}
+#bottom-child03{
+    width: 400px;
+    height: 100px;
+    background-color: #e5dcf0;
+    /* 本来の位置から相対位置 */
+    position: relative;
+    top: auto;
+    left: 400px;
+}

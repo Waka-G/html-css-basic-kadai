@@ -8,8 +8,9 @@ body{
 h1{
     /* google fontsを指定する */
     font-family: 'Josefin Sans', sans-serif;
-    /* 20pxの２倍(40px)にする */
-    font-size: 40px;
+    /* 20pxの２倍(40px)にする  */
+    /* 修正箇所 emを使用して親要素を基準に２倍にする */
+    font-size: 2em;
     /* 文字の間隔（字間）1.2倍 */
     letter-spacing: 1.2em;
     /* 文字に影 */

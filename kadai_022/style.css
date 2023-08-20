@@ -1,0 +1,122 @@
+h1{
+    margin: 0px 0px;
+}
+p{
+    margin: 0px 0px;
+}
+body{
+    margin: 0px 0px;
+}
+/* 記事内全てのp要素とa要素のフォントサイズを20px */
+p{
+    font-size: 20px;
+}
+a{
+    font-size: 20px;
+}
+
+/* header要素内のスタイル */
+header{
+    /* 下の余白を20px */
+    margin-bottom: 20px;
+    /* 背景色を「 rgb(244, 79, 79)」 */
+    background-color: rgb(244, 79, 79);
+    /* 中の要素(テキスト)が中央揃え */
+    text-align: center;
+}
+
+/* Step4-2. main内スタイルの設定 */
+/* main要素全体について、以下のスタイル */
+main{
+    /* main要素内の余白を上下左右とも10px */
+    padding: 10px 10px;
+}
+
+/* id名parentの要素について、以下のスタイル */
+#parent{
+    /* Flexコンテナにする */
+    display: flex;
+    /* 番左と一番右のアイテムも含め、均等な間隔で配置する */
+    justify-content: space-around;
+    
+}
+/* class名contentsの要素 */
+.contents{
+    /* 太さ3px */
+    border: solid 3px rgb(238, 204, 204);
+    /* 親要素をflexにすることでクラスcontensをflexアイテムにすることができる */
+    flex-basis: 25%;
+    /* 要素内の余白は上下10px、左右15px */
+    padding: 10px 15px;
+
+    /* 要素外の余白は上下20px、左右0 */
+    margin: 20px 0px;
+    
+    /* 中の要素(テキスト)が中央揃えになる */
+    text-align: center;
+    
+}
+/* 画像の大きさを設定(ここを設定しないとflex-basisが適用されずに、img画像が大きくなる) */
+img{
+    margin: 10px 0px;
+    width: 70%;
+}
+
+/* h2要素について */
+h2{
+    /* 下線（太さ3px、点線、色rgb(236, 122, 122) */
+    font-size: 25px;
+    border-bottom: dotted;
+    border-color: rgb(236, 122, 122);
+}
+/* ●記号の設定 */
+h2::before{
+    content: "●";
+    color: rgb(239, 111, 139);
+}
+/* 二番目のp要素内のテキストの中で一番目の文字 */
+/* nth-of-type(n)とfirst-letterを組み合わせる */
+/* p要素の２番目の最初の文字に適用する */
+/* 同じ要素なら最初に要素指定して、セレクタを組み合わせれとよい */
+p:nth-of-type(2)::first-letter{
+    font-weight: bold;
+    color: rgb(97, 206, 249);
+}
+
+/* Step5-1. フッター構成の作成 */
+footer{
+    background-color: rgb(244, 79, 79);
+    /* 中の要素が中央揃え */
+    text-align: center;
+}
+/* 通常時 */
+a{
+    /* 文字色rgb(255, 255, 255) */
+    color:rgb(255, 255, 255);
+}
+/* カーソルを合わせたとき */
+a:hover{
+    color: rgb(245, 178, 168);
+}
+/* 訪問済み */
+a:visited{
+    color: rgb(193, 234, 251);
+}
+
+/* ブレークポイントを設定 画面幅768px以下のスタイル設定*/
+@media screen and (max-width: 768px){
+    h2{
+        /* h2のフォントサイズは30px */
+        font-size: 30px;
+    }
+    p{
+        /* pのフォントサイズは25px */
+        font-size: 25px;
+    }
+    #parent{
+        /* Flexboxコンテナであるid名parent内の要素が縦に並ぶ */
+        display: flex;
+        flex-direction:column;
+    }
+    
+}
